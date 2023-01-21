@@ -1,0 +1,57 @@
+<%- include("../partials/headern") %>
+<br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="subpage-title"><%= language.__('Goście, którzy potwierdzili uczestnictwo') %></h1>
+            </div>
+        </div>
+        <% if(guests.length === 0){ %>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="alert alert-guest text-center">
+                        <%= language.__('Do tej pory żadni goście nie potwierdzili uczestnictwa') %>
+                    </div>
+                    
+                </div>
+            </div>
+        <% } else { %>
+            <div class="row">
+                <% guests.forEach((guest) => { %>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 10px;">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    
+                                    <%= guest.name %>
+                                </div>
+                                
+                                    <p class="description">
+                                        <%= language.__('Wesele:') %> <strong><%= guest.isHere %></strong>
+                                    </p>
+                                    <p class="description">
+                                        <%= language.__('Dzielenie pokoju:') %> <strong><%= guest.room %></strong>
+                                    </p>
+                                    <p class="description">
+                                        <%= language.__('Dzielenie łazienki') %> <strong><%= guest.bathroom %></strong>
+                                    </p>
+                                    <p class="description">
+                                        <%= language.__('Uwagi lub pytania:') %> <strong><%= guest.comments %></strong>
+                                    </p>
+                                    <p class="description">
+                                        <%= language.__('Data wypełnienia formularza:') %> <strong><%= guest.confirmDate.toDateString() %></strong>
+                                    </p>
+                                
+                                
+                                
+
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+<%- include("../partials/footer") %>

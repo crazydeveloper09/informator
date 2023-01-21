@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+
+<head>
+ 
+    <title> <%= header %></title>
+  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b2ec1cb26d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient justify-content-center" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand logo" href="/">Magda i Josh</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border:none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard" id="dashboard"><%= language.__('Goście') %></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hotels"><%= language.__('Hotele') %></a>
+                    </li>    
+                    
+                   
+                        
+                    <li class="nav-item">
+                        <a class="nav-link" href="/infos" id="typesNav"><%= language.__('Ważne informacje') %></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/events" id="typesNav"><%= language.__('Wydarzenia') %></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/<%= currentUser._id %>/edit" id="typesNav"><%= language.__('Edytuj konto') %></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout"><%= language.__('Wyloguj się') %></a>
+                    </li>
+                   
+                </ul>
+            </div>	
+        </div>	    
+    </nav>

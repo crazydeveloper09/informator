@@ -1,0 +1,118 @@
+<%- include("../partials/headera") %>
+<div class="col-lg-6 col-md-12" id="form">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-12" style="margin-top: 4%">
+            <div id="form1">
+                <a href="/hotels">
+                    <i class="fas fa-arrow-left"></i>
+                    <%= language.__('Wróć do strony z noclegami') %>
+                </a>
+                <h1 class="login"><%= language.__('Dodaj nocleg') %></h1>
+                <% if(error.length > 0){ %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                    </div>
+                <% } %>
+                <% if(success.length > 0){ %>
+                    <div class="alert alert-success" role="alert">
+                        <%= success %>
+                    </div>
+                <% } %>
+                <form action="/hotels" method="post" id>
+                   
+                    <label for="username" class="username">
+                        <%= language.__('Nazwa hotelu') %>
+                        
+                    </label>
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="name" id="username" placeholder="<%= language.__('Tu wpisz nazwę hotelu') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Miasto') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="city" id="city" placeholder="<%= language.__('Tu wpisz miasto hotelu') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Ulica i numer') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="street" id="street" placeholder="<%= language.__('Tu wpisz ulicę i numer') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Telefon') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="<%= language.__('Tu wpisz numer kontaktowy hotelu') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Opis po polsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="description" id="description" placeholder="<%= language.__('Tutaj wpisz opis po polsku') %>" class="form-control"></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Opis po angielsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="descriptionEn" id="descriptionEn" placeholder="<%= language.__('Tutaj wpisz opis po angielsku') %>" class="form-control"></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Ważna informacja odnośnie hotelu po polsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="important" id="important" placeholder="<%= language.__('Tutaj wpisz ważną informację po polsku') %>" class="form-control"></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Ważna informacja odnośnie hotelu po angielsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="importantEn" id="importantEn" placeholder="<%= language.__('Tutaj wpisz ważną informację po angielsku') %>" class="form-control"></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Ciekawostka odnośnie hotelu po polsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="fact" id="fact" placeholder="<%= language.__('Tutaj wpisz ciekawostkę po polsku') %>" class="form-control"></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Ciekawostka odnośnie hotelu po angielsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="factEn" id="factEn" placeholder="<%= language.__('Tutaj wpisz ciekawostkę po angielsku') %>" class="form-control"></textarea>
+                    </div>
+                    <input type="submit" value="<%= language.__('Dodaj nocleg') %>" class="btn btn-success button btn-golden">
+                   
+                </form>
+                
+            </div>
+           
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

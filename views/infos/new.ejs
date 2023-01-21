@@ -1,0 +1,99 @@
+<%- include("../partials/headera") %>
+<div class="col-lg-6 col-md-12" id="form">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-12" style="margin-top: 4%">
+            <div id="form1">
+                <a href="/infos">
+                    <i class="fas fa-arrow-left"></i>
+                    <%= language.__('Wróć do strony z ważnymi informacjami') %>
+                </a>
+                <h1 class="login"><%= language.__('Dodaj ważną informację') %></h1>
+                <% if(error.length > 0){ %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                    </div>
+                <% } %>
+                <% if(success.length > 0){ %>
+                    <div class="alert alert-success" role="alert">
+                        <%= success %>
+                    </div>
+                <% } %>
+                <form action="/infos" method="post" id>
+                   
+                    <label for="username" class="username">
+                        <%= language.__('Nazwa ważnej informacji po polsku') %>
+                        
+                    </label>
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="name" id="username" placeholder="<%= language.__('Tu wpisz nazwę informacji po polsku') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Nazwa ważnej informacji po angielsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="nameEn" id="nameEn" placeholder="<%= language.__('Tu wpisz nazwę informacji po angielsku') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Czas trwania/rozpoczęcia ważnej informacji') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="time" id="time" placeholder="<%= language.__('Tu wpisz czas trwania/rozpoczęcia ważnej informacji') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Miejsce, gdzie się odbędzie po polsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="place" id="place" placeholder="<%= language.__('Tu wpisz miejsce, gdzie się odbędzie po polsku') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Miejsce, gdzie się odbędzie po angielsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="placeEn" id="placeEn" placeholder="<%= language.__('Tu wpisz miejsce, gdzie się odbędzie po angielsku') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+
+                    <label for="password" class="username">
+                        <%= language.__('Miasto ważnej informacji') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="city" id="city" placeholder="<%= language.__('Tu wpisz miasto ważnej informacji') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Ulica i numer ważnej informacji') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="street" id="street" placeholder="<%= language.__('Tu wpisz ulicę i numer ważnej informacji') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    
+                    <input type="submit" value="<%= language.__('Dodaj informację') %>" class="btn btn-success button btn-golden">
+                   
+                </form>
+                
+            </div>
+           
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

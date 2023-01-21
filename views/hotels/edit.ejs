@@ -1,0 +1,125 @@
+<%- include("../partials/headera") %>
+<div class="col-lg-6 col-md-12" id="form">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-12" style="margin-top: 4%">
+            <div id="form1">
+                <a href="/hotels">
+                    <i class="fas fa-arrow-left"></i>
+                    <%= language.__('Wróć do strony z noclegami') %>
+                </a>
+                <h1 class="login">
+                    <% if(userLanguage === 'pl'){ %>
+                        Edytuj nocleg <%= hotel.name %>
+                    <% } else { %>
+                        Edit hotel <%= hotel.name %>
+                    <% } %>
+                   
+                </h1>
+                <% if(error.length > 0){ %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                    </div>
+                <% } %>
+                <% if(success.length > 0){ %>
+                    <div class="alert alert-success" role="alert">
+                        <%= success %>
+                    </div>
+                <% } %>
+                <form action="/hotels/<%= hotel._id %>?_method=PUT" method="post" id>
+                   
+                    <label for="username" class="username">
+                        <%= language.__('Edytuj nazwę hotelu') %>
+                        
+                    </label>
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="hotel[name]" value="<%= hotel.name %>" id="username" placeholder="<%= language.__('Tu wpisz nazwę hotelu') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Edytuj miasto') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="hotel[city]" value="<%= hotel.city %>" id="city" placeholder="<%= language.__('Tu wpisz miasto hotelu') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Edytuj ulicę i numer') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="hotel[street]" value="<%= hotel.street %>" id="street" placeholder="<%= language.__('Tu wpisz ulicę i numer') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Edytuj telefon') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="hotel[phone]" value="<%= hotel.phone %>" id="phone" placeholder="<%= language.__('Tu wpisz numer kontaktowy hotelu') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Edytuj opis po polsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="hotel[description]" id="description" placeholder="<%= language.__('Tutaj wpisz opis po polsku') %>" class="form-control"><%= hotel.description %></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Edytuj opis po angielsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="hotel[descriptionEn]" id="descriptionEn" placeholder="<%= language.__('Tutaj wpisz opis po angielsku') %>" class="form-control"><%= hotel.descriptionEn %></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Edytuj ważną informację odnośnie hotelu po polsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="hotel[important]" id="important" placeholder="<%= language.__('Tutaj wpisz ważną informację po polsku') %>" class="form-control"><%= hotel.important %></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Edytuj ważną informację odnośnie hotelu po angielsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="hotel[importantEn]" id="importantEn" placeholder="<%= language.__('Tutaj wpisz ważną informację po angielsku') %>" class="form-control"><%= hotel.importantEn %></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Edytuj ciekawostkę odnośnie hotelu po polsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="hotel[fact]" id="fact" placeholder="<%= language.__('Tutaj wpisz ciekawostkę po polsku') %>" class="form-control"><%= hotel.fact %></textarea>
+                    </div>
+                    <label for="password" class="username">
+                        <%= language.__('Edytuj ciekawostkę odnośnie hotelu po angielsku') %>
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        <textarea name="hotel[factEn]" id="factEn" placeholder="<%= language.__('Tutaj wpisz ciekawostkę po angielsku') %>" class="form-control"><%= hotel.factEn %></textarea>
+                    </div>
+                    <input type="submit" value="<%= language.__('Edytuj nocleg') %>" class="btn btn-success button btn-golden">
+                   
+                </form>
+                
+            </div>
+           
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

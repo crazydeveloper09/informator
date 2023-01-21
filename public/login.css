@@ -1,0 +1,167 @@
+body,
+html {
+    background-color:#326647;
+}
+
+.container-full {
+    width: 100vw;
+}
+
+#info {
+    background:#326647;
+    height: 100vh;
+}
+#info .logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 55px;
+    color: white;
+    
+}
+
+#info .description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+#form {
+    background: #F2F4F5;
+}
+
+#basic-addon1 {
+    border-color: #326647; 
+    color: #326647; 
+    background: #fff;
+}
+
+#form1 a {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+.infoDescription {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+#form .login {
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    color:#326647
+}
+
+#form .username {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+
+#form .button {
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+#description,
+#descriptionEn,
+#important,
+#importantEn,
+#fact,
+#factEn {
+    border-color: #326647;
+}
+#form1 .form-check-label {
+    font-family: 'Raleway', sans-serif;
+}
+
+#form1 .form-check-label a {
+    font-size: 15px;
+}
+
+@media (max-width: 992px) {
+    #info {
+        display: none;
+    }
+    #form1 {
+        padding: 4%;
+    }
+    body,html {
+        background: #F2F4F5;
+    }
+}
+
+.btn-golden {
+    background:   #326647;
+    border: 1px solid  #326647;
+    
+}
+#description_r {
+    color: #c9c7c7;
+    font-size:18px;
+    font-family: 'Raleway', sans-serif;
+}
+.description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #212529;
+}
+.title {
+    font-size: 35px;
+    color: lightseagreen;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+.title_r {
+    font-size: 45px;
+    color: goldenrod;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+  .info {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: white;
+  }
+  .btn-green {
+    background: #326647;
+    border: 1px solid  #326647;
+    color: white;
+  }
+  
+
+  input[type=radio] {
+    opacity:0;
+        position:absolute;
+
+}
+.radio {
+    font-size: 19px;
+    font-family: 'Raleway', sans-serif;
+    color: #212529;
+}
+.radioButton {
+    margin-right: 5px;
+    width:19px;
+    height:19px;
+    border-radius: 50%;
+    border: 2px solid #326647;
+    float: left;
+   
+}
+
+
+input:checked + .radioButton {
+    background: #326647;
+    box-shadow: inset 0 0 0 3px #326647;
+}
+

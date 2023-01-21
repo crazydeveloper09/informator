@@ -1,0 +1,182 @@
+#header {
+    font-size: 90px;
+    color: #326647;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 3px 3px 5px #626664;
+}
+
+.info p {
+    font-family: 'Satisfy', cursive;
+    font-size: 30px;
+}
+
+.bg-gradient {
+    background: #326647;
+}
+
+.btn-golden {
+    background:   #326647;
+    border: 1px solid  #326647;
+    
+}
+
+#mainNav .nav-link {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+#mainNav .nav-link:hover {
+    
+    color:white;
+    border-bottom: 3px solid white;
+}
+
+#mainNav .nav-link.active {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.subpage-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.baner {
+    background: #326647;
+    padding: 20px;
+}
+
+.baner p {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.important_infos {
+    margin-top: 20px;
+}
+
+.important_infos h1 {
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.important_infos .informacja h2 {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+}
+
+.important_infos .informacja p {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.noclegi h2 {
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.events h1 {
+    font-size: 45px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.eventsP {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    color: grey;
+}
+
+.eventsh1 {
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.eventsh2 {
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    color: #326647;
+}
+
+.soon h2 {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #326647;
+}
+
+.soon p {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer {
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer a {
+    color: #212529;
+}
+
+.btn-green {
+    background: #326647;
+    border: 1px solid  #326647;
+    color: white;
+}
+
+.card-title {
+    color: #326647;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.infosh2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+   
+}
+
+.infoDescription {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.card-body .description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+#countdown {
+    background: #ebebeb;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+}
+
+#countdown #date {
+    color: #326647;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+#countdown h3 {
+    font-size: 40px;
+}
+
+#countdown #zegar {
+    color: #326647;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 30px;
+}
