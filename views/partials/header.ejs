@@ -19,60 +19,35 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Epilogue&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <% if(userLanguage === 'pl'){ %>
+       
             <script>
                 function zmianaCzasu(){
                     const dzisiaj = new Date();
-                    const data = new Date("07/21/2021 16:30:00");
+                    const data = new Date("05/20/2023 13:30:00");
                    
                     var dzien = Math.round(Math.abs(data - dzisiaj) / 86400000) -1;
                     var godzina = Math.round(Math.abs(data - dzisiaj) / (1000 * 60 * 60) % 24);
                     var minuta = Math.round(Math.abs(data - dzisiaj) / (1000 * 60) % 60);
                     var sekunda = Math.round(Math.abs(data - dzisiaj) / (1000) % 60);
                     
-                    
         
-                    
-                    
-                    
-        
-                    document.getElementById("zegar").innerHTML = `${dzien} dni ${godzina} godz. ${minuta}min ${sekunda}s`;
+                    document.getElementById("days").innerHTML = dzien;
+                    document.getElementById("hours").innerHTML = godzina;
+                    document.getElementById("minutes").innerHTML = minuta;
+                    document.getElementById("seconds").innerHTML = sekunda;
                    
                     setTimeout("zmianaCzasu()", 1000);
                 }
             </script>
-        <% } else { %>
-            <script>
-                function zmianaCzasu(){
-                    const dzisiaj = new Date();
-                    const data = new Date("07/21/2021");
-                   
-                    const data = new Date("07/21/2021 16:30:00");
-                   
-                    var dzien = Math.round(Math.abs(data - dzisiaj) / 86400000) -1;
-                    var godzina = Math.round(Math.abs(data - dzisiaj) / (1000 * 60 * 60) % 24);
-                    var minuta = Math.round(Math.abs(data - dzisiaj) / (1000 * 60) % 60);
-                    var sekunda = Math.round(Math.abs(data - dzisiaj) / (1000) % 60);
-                    
-                    
-        
-                    
-                    
-                    
-        
-                    document.getElementById("zegar").innerHTML = `${dzien} days ${godzina}h ${minuta}min ${sekunda}s`;
-                   
-                    setTimeout("zmianaCzasu()", 1000);
-                }
-            </script>
-        <% } %>
+       
     
 </head>
 

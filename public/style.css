@@ -1,17 +1,54 @@
+body, html {
+    font-family: 'Raleway', sans-serif;
+}
+
 #header {
     font-size: 90px;
     color: #326647;
-    font-family: 'Raleway', sans-serif;
     text-shadow: 3px 3px 5px #626664;
 }
 
-.info p {
-    font-family: 'Satisfy', cursive;
-    font-size: 30px;
+.info {
+    background: url('./tlo.png');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.info__header {
+    background: rgba(239, 239, 239, 0.5);
+    padding: 20px 0;
+    color: #474747;
+}
+
+.info__header h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.info__header p {
+    font-family: 'Della Respira', serif;
+    font-size: 64px;
+}
+
+.info__buttons {
+    margin-top: 200px;
+    width: 419px;
+}
+
+.info__buttons a {
+    background: #474747;
+    color: #EFEFEF;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    padding: 10px 50px;
+    width: 100%;
+    text-transform: uppercase;
+    margin-left: 70px;
 }
 
 .bg-gradient {
-    background: #326647;
+    background: #474747;
 }
 
 .btn-golden {
@@ -21,13 +58,11 @@
 }
 
 #mainNav .nav-link {
-    font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     
 }
 
 .logo {
-    font-family: 'Raleway', sans-serif;
     font-weight: 100;
 }
 
@@ -43,7 +78,6 @@
 }
 
 .subpage-title {
-    font-family: 'Raleway', sans-serif;
     font-size: 40px;
     font-weight: 700;
 }
@@ -54,78 +88,102 @@
 }
 
 .baner p {
-    font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 20px;
 }
 
-.important_infos {
-    margin-top: 20px;
+.date {
+    padding: 76px 0;
+    background: #313131;
+    text-align: center;
+    font-family: 'Della Respira', serif;
+    color: #EFEFEF;
+}
+
+.date div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 87px;
+}
+
+.date .month,
+.date .dayOfWeek,
+.date .hour,
+.date .year {
+    font-weight: 500;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.date .dayOfWeek,
+.date .hour {
+    width: 235px;
+    border-top: 3px solid #EFEFEF;
+    border-bottom: 3px solid #EFEFEF;
+}
+
+.date .day {
+    font-weight: 500;
+    font-size: 128px; 
+}
+
+.important_infos div {
+    margin-top: 92px;
 }
 
 .important_infos h1 {
-    font-size: 50px;
-    font-family: 'Raleway', sans-serif;
+    font-size: 43px;
+    font-weight: 800;
+    margin-top: 92px;
 }
 
-.important_infos .informacja h2 {
-    font-size: 30px;
-    font-weight: 500;
-    font-family: 'Raleway', sans-serif;
+.important_infos div h2 {
+    font-size: 36px;
+    font-weight: 600;
 }
 
-.important_infos .informacja p {
-    font-size: 20px;
-    font-family: 'Raleway', sans-serif;
+.important_infos div p {
+    font-size: 32px;
+    font-weight: 400;
 }
 
-.noclegi h2 {
-    font-size: 30px;
-    font-family: 'Raleway', sans-serif;
-    
+.gifts {
+    text-align: center;
+    background: #313131;
+    padding: 139px 90px;
+    font-size: 36px;
+    color: #EFEFEF;
+    margin-top: 95px;
 }
 
-.events h1 {
-    font-size: 45px;
-    font-family: 'Raleway', sans-serif;
+.soon {
+    margin-top: 75px;
 }
-
-.eventsP {
-    font-size: 18px;
-    font-family: 'Raleway', sans-serif;
-    color: grey;
-}
-
-.eventsh1 {
-    font-size: 25px;
-    font-family: 'Raleway', sans-serif;
-}
-
-.eventsh2 {
-    font-size: 30px;
-    font-family: 'Raleway', sans-serif;
-    color: #326647;
-}
-
 .soon h2 {
-    font-size: 40px;
-    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
     font-weight: 700;
-    color: #326647;
+    color: #474747;
 }
 
 .soon p {
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
 }
 
 .footer {
-    font-size: 13px;
-    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-family: 'Epilogue', sans-serif;
+    color: #fff;
 }
 
 .footer a {
-    color: #212529;
+    color: #fff;
+}
+
+.footer {
+    background: #474747;
+    padding-top: 44px;
+    padding-bottom: 27px;
 }
 
 .btn-green {
@@ -135,48 +193,165 @@
 }
 
 .card-title {
-    color: #326647;
-    font-family: 'Raleway', sans-serif;
+    color: #474747;
     font-size: 25px;
     font-weight: 700;
 }
 
 .infosh2 {
-    font-family: 'Raleway', sans-serif;
     font-size: 35px;
    
 }
 
 .infoDescription {
-    font-family: 'Raleway', sans-serif;
     font-size: 20px;
 }
 
 .card-body .description {
-    font-family: 'Raleway', sans-serif;
     font-size: 20px;
 }
 
 #countdown {
-    background: #ebebeb;
-    font-family: 'Raleway', sans-serif;
-    padding: 10px;
+    background: #474747;
+    padding: 34px 70px;
+    color: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    letter-spacing: 0.1em;
 }
 
-#countdown #date {
-    color: #326647;
-    font-weight: 700;
-    font-size: 45px;
-}
+
 
 #countdown h3 {
-    font-size: 40px;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-block-end: 0px;
+}
+
+#countdown #zegar span {
+    font-size: 48px;
+    font-weight: 800px;
+    margin-right: 14px;
+    margin-left: 32px;
 }
 
 #countdown #zegar {
-    color: #326647;
-    font-family: 'Nunito', sans-serif;
-    font-style: italic;
+    font-size: 24px;
     font-weight: 700;
-    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.zoom {
+    margin-top: 120px;
+}
+
+.zoom p {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.zoom__id,
+.zoom__password {
+    font-size: 36px;
+}
+
+.questions {
+    margin-top: 65px;
+}
+
+.questions p {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.confirm {
+    margin-top: 75px;
+    
+}
+
+.confirm p {
+    font-size: 32px;
+    margin: 0 auto;
+}
+
+.btn-grey {
+    background: #313131;
+    padding: 10px 50px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #EFEFEF;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+    #countdown,
+    #countdown span {
+        display: block;
+        text-align: center;
+    }
+
+    .date {
+        padding: 46px 0;
+    }
+    
+    .date div {
+        gap: 17px;
+    }
+    
+    .date .month,
+    .date .dayOfWeek,
+    .date .hour,
+    .date .year {
+        font-size: 28px;
+    }
+    
+    .date .day {
+        font-size: 58px; 
+    }
+
+    .important_infos h1 {
+        font-size: 43px;
+    }
+    
+    .important_infos div h2 {
+        font-size: 30px;
+    }
+    
+    .important_infos div p {
+        font-size: 26px;
+    }
+    
+    .gifts {
+        padding: 139px 15px;
+        font-size: 30px;
+    }
+
+    .zoom p {
+        font-size: 34px;
+    }
+    
+    .zoom__id,
+    .zoom__password {
+        font-size: 30px;
+    }
+    
+    .questions p {
+        font-size: 26px;
+    }
+    
+    .confirm p {
+        font-size: 26px;
+    }
+
+    .btn-grey {
+        font-size: 18px;
+    }
+
+    .info__buttons a {
+        font-size: 18px;
+        margin-left: 15px;
+    }
 }

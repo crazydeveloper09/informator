@@ -12,10 +12,10 @@
                     <p class="infoDescription">
                         Wiemy, że ciężko jest zaplanować przyszłość i możliwość spotkania się w 
                         większym gronie, ale chcielibyśmy spróbować oszacować, kto z Was rozważa
-                         obecność na naszym weselu nie tylko duchem, ale i ciałem ;) oczywiście 
-                         rozumiemy, że Wasza decyzja może zmienić się w zależności od okoliczności. 
-                         Planujemy zorganizować transmisję ceremonii i przemówienia okolicznościowego 
-                         na Zoom.
+                        obecność na naszym weselu nie tylko duchem, ale i ciałem ;) oczywiście 
+                        rozumiemy, że Wasza decyzja może zmienić się w zależności od okoliczności. 
+                        Planujemy zorganizować transmisję ceremonii i przemówienia okolicznościowego 
+                        na Zoom.
                     </p>
                 <% } else { %>
                     <p class="infoDescription">
@@ -45,7 +45,7 @@
                     <input type="text" class="form-control" name="name" id="username" placeholder="<%= language.__('Tu wpiszcie swoje imiona i nazwiska') %>" aria-label="Hasło" aria-describedby="basic-addon1">
                     <br>
                     <label for="password" class="username">
-                        <%= language.__('Uczestnictwo w weselu') %>
+                        <%= language.__('Uczestnictwo w obiedzie') %>
                         
                     </label>
                     <br>
@@ -62,39 +62,23 @@
                     </label>
                     <br>
                     <label for="password" class="username">
-                        <%= language.__('Czy bylibyście otwarci na dzielenie pokoju?') %>
+                        <%= language.__('Czy potrzebujecie noclegu?') %>
                         
                     </label>
                     <br>
                     <label class="radio">
                         <input type="radio" name="room" value="yes">
                         <div class="radioButton"></div>
-                        <p class="answer"><%= language.__('Tak, jesteśmy otwarci') %></p>
+                        <p class="answer"><%= language.__('Tak, potrzebujemy') %></p>
                     </label>
                     <br>
                     <label class="radio">
                         <input type="radio" name="room" value="no">
                         <div class="radioButton"></div>
-                        <p class="answer"><%= language.__('Nie, nie jesteśmy otwarci') %></p>
+                        <p class="answer"><%= language.__('Nie potrzebujemy/załatwimy sobie sami') %></p>
                     </label>
                     <br>
-                    <label for="password" class="username">
-                        <%= language.__('Czy bylibyście otwarci na dzielenie łazienki?') %>
-                        
-                    </label>
-                    <br>
-                    <label class="radio">
-                        <input type="radio" name="bathroom" value="yes">
-                        <div class="radioButton"></div>
-                        <p class="answer"><%= language.__('Tak, jesteśmy otwarci') %></p>
-                    </label>
-                    <br>
-                    <label class="radio">
-                        <input type="radio" name="bathroom" value="no">
-                        <div class="radioButton"></div>
-                        <p class="answer"><%= language.__('Nie, nie jesteśmy otwarci') %></p>
-                    </label>
-                    <br>
+                    
                     <label for="password" class="username">
                         <%= language.__('Uwagi lub pytania') %>
                         

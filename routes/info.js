@@ -15,7 +15,7 @@ app.use(methodOverride("_method"));
 
 router.get("/new", isLoggedIn, function(req, res){
     
-    let header = "Dodaj info | Magda i Joshua";
+    let header = "Dodaj info | Martyna i Maciek";
     res.render("./infos/new", { header: header});
       
 });
@@ -27,7 +27,7 @@ router.get("/", isLoggedIn, function(req, res){
             console.log(err);
         } else {
             
-            let header = `Wszystkie info | Magda i Joshua`;
+            let header = `Wszystkie info | Martyna i Maciek`;
             res.render("./infos/index", {infos: infos, currentUser: req.user, lang:req.language, header: header, my:""});
         }
     });
@@ -63,7 +63,7 @@ router.get("/:id/edit", isLoggedIn, function(req, res){
         if(err) {
             console.log(err);
         } else {
-            let header = `Edytuj | ${info.name} | Magda i Joshua`;
+            let header = `Edytuj | ${info.name} | Martyna i Maciek`;
             res.render("./infos/edit", {info: info, header:header});
         }
     });

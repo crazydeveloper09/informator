@@ -1,25 +1,26 @@
 const express = require("express"),
     User = require("../models/user"),
+    Info = require("../models/info"),
     Guest = require("../models/guest"),
     passport = require("passport"),
     i18n = require("i18n"),
     router = express.Router();
 
 router.get("/", (req, res) => {
-    User.find({}).limit(2).exec((err, users) => {
+    Info.find({}).exec((err, infos) => {
        if(err) {
            console.log(err);
        } else {
            i18n.setLocale(req.language);
            
-            let header = "Informator ślubny | Magda i Josh";
-            res.render("index", {currentUser: req.user, lang:req.language, users: users, header: header, home:""});
+            let header = "Informator ślubny | Martyna i Maciek";
+            res.render("index", {currentUser: req.user, lang:req.language, infos: infos, header: header, home:""});
        }
    });
 });
 
 router.get("/login", (req, res) => {
-    let header = "Logowanie | Magda i Josh";
+    let header = "Logowanie | Martyna i Maciek";
     res.render("login", {header: header});
 });
 
@@ -38,7 +39,7 @@ router.post("/login", passport.authenticate("local", {
 
 router.get("/register", (req, res) => {
     i18n.setLocale(req.language);
-    let header = "Rejestracja | Magda i Joshua";
+    let header = "Rejestracja | Martyna i Maciek";
     res.render("register", {header: header});
 });
 router.post("/register", (req, res) => {
@@ -70,7 +71,7 @@ router.get("/dashboard", isLoggedIn, function(req, res) {
             console.log(err);
         } else {
             
-            let header = `Wszyscy goście | Magda i Joshua`;
+            let header = `Wszyscy goście | Martyna i Maciek`;
             res.render("./guests/index", {guests: guests, currentUser: req.user, lang:req.language, header: header, my:""});
         }
     });
@@ -81,7 +82,7 @@ router.get("/user/:user_id/edit", isLoggedIn, (req, res) => {
         if(err){
             console.log(err)
         } else {
-            let header = "Edytuj dane kontaktowe | Magda i Josh";
+            let header = "Edytuj dane kontaktowe | Martyna i Maciek";
             res.render("uedit", {
                 header: header,
                 user: user

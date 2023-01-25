@@ -2,263 +2,112 @@
 <p class="d-none" id="language"><%= userLanguage %></p>
 <div class="container-full">
     <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12">
             <div class="info">
-                <img src="map45.png" alt="mapa" style="width: 100%;">
-                <h1 id="header"><%= language.__('Informator ślubny') %></h1>
-                <p>
-                    <%= language.__('Magdy i Josha') %>
-                </p>
+                <div class="info__header text-center" >
+                    <h1><%= language.__('Informator ślubny') %></h1>
+                    <p>
+                        <%= language.__('Martyny i Maćka') %>
+                    </p>
+                </div>
+                <div class="info__buttons">
+                    <a href="/guests/confirm">Ankieta</a> <br><br>
+                    <a href="#important_infos">Informacje</a>
+                </div>
+               
             </div>
             <% if(success.length > 0){ %>
                 <div class="alert alert-success" role="alert">
                     <%= language.__('Dziękujemy za potwierdzenie uczestnictwa') %>
                 </div>
             <% } %>
-            <div class="baner">
-                <p> <%= language.__('Macie pytania? Napiszcie') %></p>
-                <% if(users.length === 0){ %>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="alert alert-info">
-                                <%= language.__('Nie ma jeszcze danych kontaktowych') %>
-                            </div>
-                        </div>
-                    </div>
-                <% } else { %>
-                    <% users.forEach((user) => { %>
-                        <a href="mailto:<%= user.email %>" class="btn btn-light" style="color:#326647; margin-right: 20px;">
-                            <%= user.name %> - <%= user.email %>
-                        </a>
-                    <% }) %>
-                <% } %>
-                
-            </div>
+           
             <div id="countdown">
-                <h3><%= language.__('Ten dzień już za:') %></h3>
-                <p id="zegar"></p>
-                <p> <%= language.__('czyli') %> 
-                    <span id="date">
-                        <% if(userLanguage === 'pl'){ %>
-                            21/07/2021
-                        <% } else { %>
-                            07/21/2021
-                        <% } %>
+                <div>
+                    <h3><%= language.__('Zostało:') %></h3>
+                </div>
+                <div>
+                    <p id="zegar">
+                        <span id="days"></span>
+                        <%= language.__('Dni') %>
+                        <span id="hours"></span>
+                        <%= language.__('Godziny') %>
+                        <span id="minutes"></span>
+                        <%= language.__('Minuty') %>
+                        <span id="seconds"></span>
+                        <%= language.__('Sekundy') %>
+                    </p>
+                </div>
+                
+            </div>
+            <section class="date">
+                <p class="month">Maj</p>
+                <div>
+                    <p class="dayOfWeek">Sobota</p>
+                    <p class="day">20</p>
+                    <p class="hour">13:30</p>
+                </div>
+                <p class="year">2023</p>
+            </section>
+            <div class="important_infos text-center" id="important_infos">
+                <h1 id="infosh1"> <%= language.__('Ślubny rozkład jazdy') %></h1>
+                <% infos.forEach((info) => { %>
+                    <div>
+                        <h2 class="infosh2"><%= info.name %></h2>
+                        <p class="infoDescription">
+                            <% if(info.place){ %>
+                                <%= info.place %>, <%= info.street %>, <%= info.city %> <br>
+                            <% } %>
+                            godz. <%= info.time %>
+                        </p>
                         
-                    </span>
-                </p>
-            </div>
-            <div class="important_infos" id="important_infos">
-                <h1 id="infosh1"> <%= language.__('Najważniejsze informacje') %></h1>
-                <div class="text-center">
-                    <a href="/guests/confirm" class="btn btn-success btn-golden">
-                        <%= language.__('Kliknij, by potwierdzić uczestnictwo') %>
-                    </a>
-                </div>
-                <div class="noclegi">
-                    <h2><strong> <%= language.__('Informacje o noclegach') %></strong></h2>
-                    <% if(userLanguage === 'pl'){ %>
-                        <p class="infoDescription" id="noclegih2" style="width: 50%; margin: auto;">
-                            Pobieramy się poza Wrocławiem (ok. 90km, 1,5h drogi), chcielibyśmy także, 
-                            żebyście dołączyli do nas na śniadanie następnego dnia. W związku z tym 
-                            zarezerwowaliśmy dla Was miejsca noclegowe w pensjonatach i hotelach w 
-                            pobliżu sali weselnej. Zdecydowana większość z nich to pokoje 4-5 osobowe, 
-                            część ma dzieloną łazienkę. Postaramy się znaleźć rozwiązanie wygodne dla 
-                            wszystkich, którzy będą mieli możliwość pojawić się osobiście :)
-                        </p>
-                    <% } else { %>
-                        <p class="infoDescription" id="noclegih2" style="width: 50%; margin: auto;">
-                            Because the wedding venue is about 56 miles (approx. 1,5hrs) away from 
-                            Wrocław, we imagine that many guests would prefer to stay the night close
-                             to the wedding venue instead of travelling back to their accomodation in
-                              Wrocław. Additionally, we would like our guests to join us for breakfast 
-                              the next morning if possible. This breakfast will be provided in Stara 
-                              Kruszarnia, same as the wedding reception. Because of this we have booked 
-                              as many rooms as possible near to the venue, but because we don’t know how 
-                              many will be attending in person we don’t know if some guests may have to 
-                              share rooms. Some of the hotel rooms are designed to hold up to 4 - 5 people
-                               and there are central shared-use bathrooms.
-                        </p>
-                    <% } %>
-                </div>
-                
-            </div>
-            <div class="events" id="events">
-                <h1 id="eventsh1"> <%= language.__('Weselny rozkład jazdy') %></h1>
-            </div>
-            <div class="baner">
-                <p><%= language.__('Macie pytania? Napiszcie') %></p>
-                <% if(users.length === 0){ %>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="alert alert-info">
-                                <%= language.__('Nie ma jeszcze danych kontaktowych') %>
-                            </div>
-                        </div>
                     </div>
-                <% } else { %>
-                    <% users.forEach((user) => { %>
-                        <a href="mailto:<%= user.email %>" class="btn btn-light" style="color:#326647; margin-right: 20px;">
-                            <%= user.name %> - <%= user.email %>
-                        </a>
-                    <% }) %>
-                <% } %>
-                
-            </div>
-            <br>
-            <div class="soon">
-                <h2><%= language.__('Do zobaczenia już niedługo!') %></h2>
-                <p> <%= language.__('- Magda i Josh') %></p>
+                <% }) %>
+            </div>   
+            <section class="gifts">
+                <p>
+                    Jeśli myślicie o prezencie dla nas to prosimy, 
+                    żeby <strong>NIE</strong> był to <strong>ALKOHOL</strong>, ponieważ oboje 
+                    go nie lubimy!
+                    <br><br>
+                    Jeśli nie możesz skorzystać osobiście, a chcesz nam coś sprezentować to poniżej zamieszczamy adres wysyłki i numer konta bankowego, 
+                    na które możesz wykonać przelew.
+                    <br><br>
+                    Adres: <strong>Kurowice 79, 67-222 Jerzmanowa</strong> <br>
+                    Nr. rachunku bankowego: <strong>84 1090 2079 0000 0001 4821 7940</strong>
+                </p>
+            </section>
+            <section class="other text-center">
+                <div class="zoom">
+                    <p>Możliwość skorzystania z uroczystości i wykładu przez <strong>Zoom</strong></p>
+                    <p class="zoom__id">
+                        <strong>ID: 000 000 0000</strong>
+                    </p>
+                    <p class="zoom__password">
+                        <strong>
+                            HASŁO: xyz
+                        </strong>
+                    </p>
+                </div>
+                <div class="questions">
+                    <p>Masz pytania?</p>
+                    <a href="mailto:maciejkuta6@gmail.com" class="btn-grey">Napisz do nas</a>
+                </div>
+                <div class="confirm">
+                    <p>
+                        <strong>Zależy nam byś potwierdził swoją obecność w ankiecie.</strong><br> 
+                        Możesz wypełnić ją klikając przycisk poniżej lub klikając przycisk “ANKIETA” u góry strony.
+                    </p>
+                    <br>
+                    <a href="/guests/confirm"  class="btn-grey">Wypełnij ankietę</a>
+                </div>
+            </section>
+            <div class="soon text-center">
+                <h2><%= language.__('Do zobaczenia w maju!') %></h2>
+                <p>- Martyna i Maciek</p>
             </div>
         </div>
     </div>
 </div>
-
-
-<script>
-    let userLanguage = document.getElementById("language");
-    axios
-        .get("/api/infos")
-        .then((response) => {
-            const importantInfos = document.getElementById("infosh1");
-            if(response.data.length === 0){
-
-            } else {
-                response.data.forEach((info) => {
-                    let h2 = document.createElement("h2");
-                    let div = document.createElement("div");
-                    let p2 = document.createElement("p");
-                    let p1 = document.createElement("p");
-                    let p3 = document.createElement("p");
-                    let hr = document.createElement("hr");
-                    div.style.width = "50%";
-                    div.style.margin= "auto";
-                    div.style.marginTop = "10px";
-                    
-                    if(userLanguage.innerText === 'pl'){
-                        h2.innerText = info.name;
-                        p1.innerText = info.place;
-                        p2.innerText = `${info.city}, ul. ${info.street}`;
-                    } else {
-                        h2.innerText = info.nameEn;
-                        p1.innerText = info.placeEn;
-                        p2.innerText = `${info.city}, ul. ${info.street}`;
-                    }
-                    if(info.time){
-                        p3.innerHTML = `<em>${info.time}</em>`;
-                        p3.setAttribute("class", "infoDescription");
-                        h2.setAttribute("class", "infosh2");
-                        p1.setAttribute("class", "infoDescription");
-                        p2.setAttribute("class", "infoDescription");
-                    
-                        div.append(h2);
-                        div.append(p1);
-                        div.append(p2);
-                        div.append(p3);
-                        div.append(hr);
-                       
-                        importantInfos.appendChild(div)
-                        
-                    } else {
-                        h2.setAttribute("class", "infosh2");
-                        p1.setAttribute("class", "infoDescription");
-                        p2.setAttribute("class", "infoDescription");
-                    
-                        div.append(h2);
-                        div.append(p1);
-                        div.append(p2);
-                        div.append(hr);
-                        importantInfos.appendChild(div)
-                    }
-                    
-                });
-                
-                
-            }
-        })
-        .catch((err) => {
-
-        })
-        axios
-        .get("/api/events")
-        .then((response) => {
-            const events = document.getElementById("eventsh1");
-            if(response.data.length === 0){
-                document.getElementById("events").style.display = "none";
-            } else {
-                response.data.forEach((event) => {
-                   
-                    let div = document.createElement("div");
-                    let p = document.createElement("p");
-                    let h1 = document.createElement("h1");
-                    let h2 = document.createElement("h2");
-                   
-                    div.style.width = "50%";
-                    div.style.margin= "auto";
-                    if(userLanguage.innerText === 'pl'){
-                        h1.innerText = event.time;
-                        h2.innerText = event.name;
-                        p.innerHTML = `(${event.description})`;
-                    } else {
-                        h1.innerText = event.time;
-                        h2.innerText = event.nameEn;
-                        p.innerHTML = `(${event.descriptionEn})`;
-                    }
-                   
-                    h1.setAttribute("class", "eventsh1");
-
-                    
-                    h2.setAttribute("class", "eventsh2");
-                    
-                    p.setAttribute("class", "eventsP");
-                    div.append(h1);
-                    div.append(h2);
-
-                    div.append(p);
-                    events.appendChild(div)
-                });
-                
-                
-            }
-        })
-        .catch((err) => {
-
-        })
-        axios
-        .get("/api/hotels")
-        .then((response) => {
-            const noclegi = document.getElementById("noclegih2");
-            if(response.data.length === 0){
-
-            } else {
-                response.data.forEach((hotel) => {
-                   
-                    let div = document.createElement("div");
-                    let p = document.createElement("p");
-                    
-                   
-                    div.style.width = "50%";
-                    div.style.margin= "auto";
-                    div.setAttribute("class", "infoDescription");
-                    if(userLanguage.innerText === 'pl'){
-                        p.innerHTML = `<br> ${hotel.name}, <br> ${hotel.city}, ul. ${hotel.street} <br> tel. ${hotel.phone} <br> ${hotel.description} <br> <strong>WAŻNE: </strong>${hotel.important} <br> Ciekawostka: ${hotel.fact}`;
-                    } else {
-                        p.innerHTML = `<br> ${hotel.name}, <br> ${hotel.city}, ul. ${hotel.street} <br> tel. ${hotel.phoneEn} <br> ${hotel.descriptionEn} <br> <strong>IMPORTANT: </strong>${hotel.importantEn} <br> Fact: ${hotel.factEn}`;
-                    }
-                    
-                   
-                    div.append(p);
-                    
-                    noclegi.appendChild(div)
-                });
-                
-                
-            }
-        })
-        .catch((err) => {
-
-        })
-        
-</script>
 
 <%- include("partials/footer") %>

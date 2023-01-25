@@ -15,7 +15,7 @@ app.use(methodOverride("_method"));
 
 router.get("/confirm",  function(req, res){
     
-    let header = "Potwierdź uczestnictwo | Magda i Joshua";
+    let header = "Potwierdź uczestnictwo | Martyna i Maciek";
     res.render("./guests/confirm", { header: header});
       
 });
