@@ -11,17 +11,16 @@
                     </p>
                 </div>
                 <div class="info__buttons">
-                    <a href="/guests/confirm">Ankieta</a> <br><br>
-                    <a href="#important_infos">Informacje</a>
+                    <a href="/guests/confirm"><%= language.__('Ankieta') %></a> <br>
+                    <a href="#important_infos"><%= language.__('Informacje') %></a>
                 </div>
-               
             </div>
             <% if(success.length > 0){ %>
                 <div class="alert alert-success" role="alert">
                     <%= language.__('Dziękujemy za potwierdzenie uczestnictwa') %>
                 </div>
             <% } %>
-           
+
             <div id="countdown">
                 <div>
                     <h3><%= language.__('Zostało:') %></h3>
@@ -41,9 +40,9 @@
                 
             </div>
             <section class="date">
-                <p class="month">Maj</p>
+                <p class="month"><%= language.__('Maj') %></p>
                 <div>
-                    <p class="dayOfWeek">Sobota</p>
+                    <p class="dayOfWeek"><%= language.__('Sobota') %></p>
                     <p class="day">20</p>
                     <p class="hour">13:30</p>
                 </div>
@@ -53,7 +52,14 @@
                 <h1 id="infosh1"> <%= language.__('Ślubny rozkład jazdy') %></h1>
                 <% infos.forEach((info) => { %>
                     <div>
-                        <h2 class="infosh2"><%= info.name %></h2>
+                        <h2 class="infosh2">
+                            <% if (lang === 'pl') { %>
+                                <%= info.name %>
+                            <% } else { %>
+                                <%= info.nameEn %>
+                            <% } %>
+                        
+                        </h2>
                         <p class="infoDescription">
                             <% if(info.place){ %>
                                 <%= info.place %>, <%= info.street %>, <%= info.city %> <br>
@@ -66,40 +72,37 @@
             </div>   
             <section class="gifts">
                 <p>
-                    Jeśli myślicie o prezencie dla nas to prosimy, 
-                    żeby <strong>NIE</strong> był to <strong>ALKOHOL</strong>, ponieważ oboje 
-                    go nie lubimy!
+                    <%- language.__(`Jeśli myślicie o prezencie dla nas to prosimy, żeby <strong>NIE</strong> był to <strong>ALKOHOL</strong>, ponieważ oboje go nie lubimy!`) %>
                     <br><br>
-                    Jeśli nie możesz skorzystać osobiście, a chcesz nam coś sprezentować to poniżej zamieszczamy adres wysyłki i numer konta bankowego, 
-                    na które możesz wykonać przelew.
+                    <%= language.__('Jeśli nie możesz skorzystać osobiście, a chcesz nam coś sprezentować to poniżej zamieszczamy adres wysyłki i numer konta bankowego, na które możesz wykonać przelew.') %>
                     <br><br>
-                    Adres: <strong>Kurowice 79, 67-222 Jerzmanowa</strong> <br>
-                    Nr. rachunku bankowego: <strong>84 1090 2079 0000 0001 4821 7940</strong>
+                    <%= language.__('Adres:') %> <strong>Kurowice 79, 67-222 Jerzmanowa</strong> <br>
+                    <%= language.__('Nr. rachunku bankowego:') %> <strong>84 1090 2079 0000 0001 4821 7940</strong>
                 </p>
             </section>
             <section class="other text-center">
                 <div class="zoom">
-                    <p>Możliwość skorzystania z uroczystości i wykładu przez <strong>Zoom</strong></p>
+                    <p><%= language.__('Możliwość skorzystania z uroczystości i wykładu przez') %> <strong>Zoom</strong></p>
                     <p class="zoom__id">
-                        <strong>ID: 000 000 0000</strong>
+                        ID:<strong> 853 3201 4107</strong>
                     </p>
                     <p class="zoom__password">
-                        <strong>
-                            HASŁO: xyz
+                        <%= language.__('HASŁO:') %><strong>
+                            200523
                         </strong>
                     </p>
                 </div>
                 <div class="questions">
-                    <p>Masz pytania?</p>
-                    <a href="mailto:maciejkuta6@gmail.com" class="btn-grey">Napisz do nas</a>
+                    <p><%= language.__('Masz pytania?') %></p>
+                    <a href="mailto:maciejkuta6@gmail.com" class="btn-grey"><%= language.__('Napisz do nas') %></a>
                 </div>
                 <div class="confirm">
                     <p>
-                        <strong>Zależy nam byś potwierdził swoją obecność w ankiecie.</strong><br> 
-                        Możesz wypełnić ją klikając przycisk poniżej lub klikając przycisk “ANKIETA” u góry strony.
+                        <strong><%= language.__('Zależy nam byś potwierdził swoją obecność w ankiecie.') %></strong><br> 
+                        <%= language.__('Możesz wypełnić ją klikając przycisk “ANKIETA” poniżej lub u góry strony.') %>
                     </p>
                     <br>
-                    <a href="/guests/confirm"  class="btn-grey">Wypełnij ankietę</a>
+                    <a href="/guests/confirm" class="btn-grey"><%= language.__('Ankieta') %></a>
                 </div>
             </section>
             <div class="soon text-center">

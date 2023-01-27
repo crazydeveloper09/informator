@@ -5,7 +5,7 @@
             <div id="form1">
                 <a href="/infos">
                     <i class="fas fa-arrow-left"></i>
-                    <%= language.__('Wróć do strony z ważnymi informacjami') %>
+                    Wróć do strony z ważnymi informacjami
                 </a>
                 <h1 class="login">
                     <% if(userLanguage === 'pl'){ %>
@@ -28,70 +28,70 @@
                 <form action="/infos/<%= info._id %>?_method=PUT" method="post" id>
                    
                     <label for="username" class="username">
-                        <%= language.__('Edytuj nazwę ważnej informacji po polsku') %>
+                        Edytuj nazwę ważnej informacji po polsku
                         
                     </label>
                     <div class="input-group mb-3">
                         
-                        <input type="text" class="form-control" name="info[name]" value="<%= info.name %>" id="username" placeholder="<%= language.__('Tu wpisz nazwę informacji po polsku') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="info[name]" value="<%= info.name %>" id="username" placeholder="Tu wpisz nazwę informacji po polsku" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
                     <label for="password" class="username">
-                        <%= language.__('Edytuj nazwę ważnej informacji po angielsku') %>
-                        
-                    </label>
-
-                    <div class="input-group mb-3">
-                        
-                        <input type="text" class="form-control" name="info[nameEn]" value="<%= info.nameEn %>" id="nameEn" placeholder="<%= language.__('Tu wpisz nazwę informacji po angielsku') %>" aria-label="Hasło" aria-describedby="basic-addon1">
-                    </div>
-                    <label for="password" class="username">
-                        <%= language.__('Edytuj czas trwania/rozpoczęcia ważnej informacji') %>
+                        Edytuj nazwę ważnej informacji po angielsku
                         
                     </label>
 
                     <div class="input-group mb-3">
                         
-                        <input type="text" class="form-control" name="info[time]" id="time" value="<%= info.time %>" placeholder="<%= language.__('Tu wpisz czas trwania/rozpoczęcia ważnej informacji') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="info[nameEn]" value="<%= info.nameEn %>" id="nameEn" placeholder="Tu wpisz nazwę informacji po angielsku" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
                     <label for="password" class="username">
-                        <%= language.__('Edytuj miejsce, gdzie się odbędzie po polsku') %>
+                        Edytuj czas trwania/rozpoczęcia ważnej informacji
                         
                     </label>
 
                     <div class="input-group mb-3">
                         
-                        <input type="text" class="form-control" name="info[place]" id="place" value="<%= info.place %>" placeholder="<%= language.__('Tu wpisz miejsce, gdzie się odbędzie po polsku') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="info[time]" id="time" value="<%= info.time %>" placeholder="Tu wpisz czas trwania/rozpoczęcia ważnej informacji" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
                     <label for="password" class="username">
-                        <%= language.__('Edytuj miejsce, gdzie się odbędzie po angielsku') %> 
+                        Edytuj miejsce, gdzie się odbędzie po polsku
                         
                     </label>
 
                     <div class="input-group mb-3">
                         
-                        <input type="text" class="form-control" name="info[placeEn]" id="placeEn" value="<%= info.placeEn %>" placeholder="<%= language.__('Tu wpisz miejsce, gdzie się odbędzie po angielsku') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="info[place]" id="place" value="<%= info.place %>" placeholder="Tu wpisz miejsce, gdzie się odbędzie po polsku" aria-label="Hasło" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="password" class="username">
+                        Edytuj miejsce, gdzie się odbędzie po angielsku 
+                        
+                    </label>
+
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" name="info[placeEn]" id="placeEn" value="<%= info.placeEn %>" placeholder="Tu wpisz miejsce, gdzie się odbędzie po angielsku" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
 
                     <label for="password" class="username">
-                        <%= language.__('Edytuj miasto ważnej informacji') %>
+                        Edytuj miasto ważnej informacji
                          
                      </label>
  
                      <div class="input-group mb-3">
                          
-                        <input type="text" class="form-control" name="info[city]" id="city" value="<%= info.city %>" placeholder="<%= language.__('Tu wpisz miasto ważnej informacji') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="info[city]" id="city" value="<%= info.city %>" placeholder="Tu wpisz miasto ważnej informacji" aria-label="Hasło" aria-describedby="basic-addon1">
                      </div>
                      <label for="password" class="username">
-                        <%= language.__('Edytuj ulicę i numer ważnej informacji') %>
+                        Edytuj ulicę i numer ważnej informacji
                          
                      </label>
  
                      <div class="input-group mb-3">
                          
-                        <input type="text" class="form-control" name="info[street]" id="street" value="<%= info.street %>" placeholder="<%= language.__('Tu wpisz ulicę i numer ważnej informacji') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="info[street]" id="street" value="<%= info.street %>" placeholder="Tu wpisz ulicę i numer ważnej informacji" aria-label="Hasło" aria-describedby="basic-addon1">
                      </div>
                     
-                    <input type="submit" value="<%= language.__('Edytuj informację') %>" class="btn btn-success button btn-golden">
+                    <input type="submit" value="Edytuj informację" class="btn btn-success button btn-golden">
                    
                 </form>
                 

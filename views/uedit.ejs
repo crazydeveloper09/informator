@@ -5,9 +5,9 @@
             <div id="form1">
                 <a href="/dashboard">
                     <i class="fas fa-arrow-left"></i>
-                    <%= language.__('Wróć do strony z gośćmi') %>
+                    Wróć do strony z gośćmi
                 </a>
-                <h1 class="login"><%= language.__('Edytuj konto') %></h1>
+                <h1 class="login">Edytuj konto</h1>
                 <% if(error.length > 0){ %>
                     <div class="alert alert-danger" role="alert">
                         <%= error %>
@@ -21,7 +21,7 @@
                 <form action="/user/<%= user._id %>?_method=PUT" method="post" id>
                    
                     <label for="username" class="username">
-                        <%= language.__('Edytuj nazwę użytkownika') %>
+                        Edytuj nazwę użytkownika
                         
                     </label>
                     <div class="input-group mb-3">
@@ -30,10 +30,10 @@
                               <i class="fas fa-user"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" name="user[username]" value="<%= user.username %>" id="username" placeholder="<%= language.__('Tu wpisz nazwę użytkownika') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="user[username]" value="<%= user.username %>" id="username" placeholder="Tu wpisz nazwę użytkownika" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
                     <label for="username" class="username">
-                        <%= language.__('Edytuj imię') %>
+                        Edytuj imię
                         
                     </label>
                     <div class="input-group mb-3">
@@ -42,10 +42,10 @@
                               <i class="fas fa-user-tag"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" name="user[name]" id="username" value="<%= user.name %>" placeholder="<%= language.__('Tu wpisz swoje imię') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="user[name]" id="username" value="<%= user.name %>" placeholder="Tu wpisz swoje imię" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
                     <label for="username" class="username">
-                        <%= language.__('Edytuj email') %>
+                        Edytuj email
                         
                     </label>
                     <div class="input-group mb-3">
@@ -54,11 +54,11 @@
                               <i class="fas fa-envelope"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" name="user[email]" id="username" value="<%= user.email %>" placeholder="<%= language.__('Tu wpisz swój email') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="user[email]" id="username" value="<%= user.email %>" placeholder="Tu wpisz swój email" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
                     
                     
-                    <input type="submit" value="<%= language.__('Edytuj konto') %>" class="btn btn-success button btn-golden">
+                    <input type="submit" value="Edytuj konto" class="btn btn-success button btn-golden">
                    
                 </form>
                 

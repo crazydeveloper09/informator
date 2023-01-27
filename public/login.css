@@ -1,6 +1,7 @@
 body,
 html {
-    background-color:#326647;
+    background-color:#313131;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container-full {
@@ -8,18 +9,18 @@ html {
 }
 
 #info {
-    background:#326647;
+    background:#313131;
     height: 100vh;
 }
 #info .logo {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Della Respira', serif;
     font-size: 55px;
     color: white;
     
 }
 
 #info .description {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Della Respira', serif;
     font-size: 25px;
     color: white;
 }
@@ -35,25 +36,21 @@ html {
 }
 
 #form1 a {
-    font-family: 'Raleway', sans-serif;
     color: black;
     font-size: 18px;
 }
 
 .infoDescription {
-    font-family: 'Raleway', sans-serif;
     font-size: 20px;
 }
 
 #form .login {
-    font-family: 'Raleway', sans-serif;
     font-size: 45px;
     font-weight: 700;
     color:#326647
 }
 
 #form .username {
-    font-family: 'Raleway', sans-serif;
     font-size: 25px;
     font-weight: 700;
     color: black;
@@ -62,7 +59,6 @@ html {
 #form .button {
     width: 100%;
     margin-bottom: 15px;
-    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     color: white;
 }
@@ -78,9 +74,6 @@ input[type=number],
 #fact,
 #factEn {
     border-color: #326647;
-}
-#form1 .form-check-label {
-    font-family: 'Raleway', sans-serif;
 }
 
 #form1 .form-check-label a {
@@ -107,10 +100,8 @@ input[type=number],
 #description_r {
     color: #c9c7c7;
     font-size:18px;
-    font-family: 'Raleway', sans-serif;
 }
 .description {
-    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     margin-top: 10px;
     color: #212529;
@@ -119,16 +110,13 @@ input[type=number],
     font-size: 35px;
     color: lightseagreen;
     font-weight: 700;
-    font-family: 'Raleway', sans-serif;
 }
 .title_r {
     font-size: 45px;
     color: goldenrod;
     font-weight: 700;
-    font-family: 'Raleway', sans-serif;
 }
   .info {
-    font-family: 'Raleway', sans-serif;
     font-size: 18px;
     color: white;
   }
@@ -146,7 +134,6 @@ input[type=number],
 }
 .radio {
     font-size: 19px;
-    font-family: 'Raleway', sans-serif;
     color: #212529;
 }
 .radioButton {

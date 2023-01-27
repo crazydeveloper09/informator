@@ -5,9 +5,9 @@
             <div id="form1">
                 <a href="/">
                     <i class="fas fa-arrow-left"></i>
-                    <%= language.__('Wróć do strony głównej') %>
+                    Wróć do strony głównej
                 </a>
-                <h1 class="login"><%= language.__('Rejestracja do panelu administracyjnego') %></h1>
+                <h1 class="login">Rejestracja do panelu administracyjnego</h1>
                 <% if(error.length > 0){ %>
                     <div class="alert alert-danger" role="alert">
                         <%= error %>
@@ -21,7 +21,7 @@
                 <form action="/register" method="post" id>
                    
                     <label for="username" class="username">
-                        <%= language.__('Nazwa użytkownika') %>
+                        Nazwa użytkownika
                         
                     </label>
                     <div class="input-group mb-3">
@@ -30,10 +30,10 @@
                               <i class="fas fa-user"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" name="username" id="username" placeholder="<%= language.__('Tu wpisz nazwę użytkownika') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Tu wpisz nazwę użytkownika" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
                     <label for="username" class="username">
-                        <%= language.__('Imię') %>
+                        Imię
                         
                     </label>
                     <div class="input-group mb-3">
@@ -42,7 +42,7 @@
                               <i class="fas fa-user-tag"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" name="name" id="username" placeholder="<%= language.__('Tu wpisz swoje imię') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="name" id="username" placeholder="Tu wpisz swoje imię" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
                     <label for="username" class="username">
                         Email
@@ -54,10 +54,10 @@
                               <i class="fas fa-envelope"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" name="email" id="username" placeholder="<%= language.__('Tu wpisz swój email') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" name="email" id="username" placeholder="Tu wpisz swój email" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
                     <label for="password" class="username">
-                        <%= language.__('Hasło') %>
+                        Hasło
                         
                     </label>
 
@@ -67,9 +67,9 @@
                               <i class="fas fa-lock"></i>
                             </span>
                         </div>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="<%= language.__('Tu wpisz hasło') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Tu wpisz hasło" aria-label="Hasło" aria-describedby="basic-addon1">
                     </div>
-                    <input type="submit" value="<%= language.__('Zarejestruj się') %>" class="btn btn-success button btn-golden">
+                    <input type="submit" value="Zarejestruj się" class="btn btn-success button btn-golden">
                    
                 </form>
                 

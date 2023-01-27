@@ -3,15 +3,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="subpage-title"><%= language.__('Ważne informacje') %></h1>
-                <a href="/infos/new" class="btn btn-success btn-green"><%= language.__('Dodaj ważną informacje') %></a>
+                <h1 class="subpage-title">Ważne informacje</h1>
+                <a href="/infos/new" class="btn btn-success btn-green">Dodaj ważną informacje</a>
             </div>
         </div>
         <% if(infos.length === 0){ %>
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="alert alert-info text-center">
-                        <%= language.__('Do tej pory nie dodano jeszcze ważnych informacji') %>
+                        Do tej pory nie dodano jeszcze ważnych informacji
                     </div>
                     
                 </div>
@@ -47,10 +47,10 @@
                                     </p>
                                 <% } else { %>
                                     <p class="description">
-                                        <%= language.__('Miasto:') %> <strong><%= info.city %></strong>
+                                        Miasto: <strong><%= info.city %></strong>
                                     </p>
                                     <p class="description">
-                                        <%= language.__('Ulica i numer:') %> <strong><%= info.street %></strong>
+                                        Ulica i numer: <strong><%= info.street %></strong>
                                     </p>
                                     <p class="description">
                                         
@@ -65,10 +65,10 @@
 
                                 
                                 <a href="/infos/<%= info._id %>/edit" class="btn btn-success btn-green">
-                                    <%= language.__('Edytuj') %>
+                                    Edytuj
                                 </a>
                                 <a href="/infos/<%= info._id %>/delete" class="btn btn-danger">
-                                    <%= language.__('Usuń') %>
+                                    Usuń
                                 </a>
                             </div>
                         </div>

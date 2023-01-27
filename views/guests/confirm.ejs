@@ -5,26 +5,10 @@
             <div id="form1">
                 <a href="/">
                     <i class="fas fa-arrow-left"></i>
-                    <%= language.__('Wróć do strony głównej') %>
+                    Wróć do strony głównej
                 </a>
-                <h1 class="login"><%= language.__('Potwierdź uczestnictwo') %></h1>
-                <% if(userLanguage === 'pl'){ %>
-                    <p class="infoDescription">
-                        Wiemy, że ciężko jest zaplanować przyszłość i możliwość spotkania się w 
-                        większym gronie, ale chcielibyśmy spróbować oszacować, kto z Was rozważa
-                        obecność na naszym weselu nie tylko duchem, ale i ciałem ;) oczywiście 
-                        rozumiemy, że Wasza decyzja może zmienić się w zależności od okoliczności. 
-                        Planujemy zorganizować transmisję ceremonii i przemówienia okolicznościowego 
-                        na Zoom.
-                    </p>
-                <% } else { %>
-                    <p class="infoDescription">
-                        We know that it is difficult to plan travel right now, but we would like to 
-                        try to estimate who is willing to consider attending in person. We 
-                        understand your decision may change depending on the circumstances :)  
-                        There will be a zoom feed of the wedding for those unable to attend in person.
-                    </p>
-                <% } %>
+                <h1 class="login">Potwierdź uczestnictwo</h1>
+        
                 <% if(error.length > 0){ %>
                     <div class="alert alert-danger" role="alert">
                         <%= error %>
@@ -36,56 +20,56 @@
                     </div>
                 <% } %>
                 <form action="/guests" method="post" id>
-                   
+                
                     <label for="username" class="username">
-                        <%= language.__('Wasze imiona') %>
+                        Wasze imiona
                         
                     </label>
                     
-                    <input type="text" class="form-control" name="name" id="username" placeholder="<%= language.__('Tu wpiszcie swoje imiona i nazwiska') %>" aria-label="Hasło" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" name="name" id="username" placeholder="Tu wpiszcie swoje imiona i nazwiska" aria-label="Hasło" aria-describedby="basic-addon1">
                     <br>
                     <label for="password" class="username">
-                        <%= language.__('Uczestnictwo w obiedzie') %>
+                        Uczestnictwo w obiedzie
                         
                     </label>
                     <br>
                     <label class="radio">
                         <input type="radio" name="isHere" value="yes">
                         <div class="radioButton"></div>
-                        <p><%= language.__('Tak, postaramy się być') %></p>
+                        <p>Tak, postaramy się być</p>
                     </label>
                     <br>
                     <label class="radio">
                         <input type="radio" name="isHere" value="no">
                         <div class="radioButton"></div>
-                        <p><%= language.__('Nie, nie możemy być osobiście') %></p>
+                        <p>Nie, nie możemy być osobiście</p>
                     </label>
                     <br>
                     <label for="password" class="username">
-                        <%= language.__('Czy potrzebujecie noclegu?') %>
+                        Czy potrzebujecie noclegu?
                         
                     </label>
                     <br>
                     <label class="radio">
                         <input type="radio" name="room" value="yes">
                         <div class="radioButton"></div>
-                        <p class="answer"><%= language.__('Tak, potrzebujemy') %></p>
+                        <p class="answer">Tak, potrzebujemy</p>
                     </label>
                     <br>
                     <label class="radio">
                         <input type="radio" name="room" value="no">
                         <div class="radioButton"></div>
-                        <p class="answer"><%= language.__('Nie potrzebujemy/załatwimy sobie sami') %></p>
+                        <p class="answer">Nie potrzebujemy/załatwimy sobie sami</p>
                     </label>
                     <br>
                     
                     <label for="password" class="username">
-                        <%= language.__('Uwagi lub pytania') %>
+                        Uwagi lub pytania
                         
                     </label>
-                    <textarea name="comments" id="fact" placeholder="<%= language.__('Tutaj wpisz uwagi lub pytania') %>" class="form-control"></textarea>
+                    <textarea name="comments" id="fact" placeholder="Tutaj wpisz uwagi lub pytania" class="form-control"></textarea>
                     <br>
-                    <input type="submit" value="<%= language.__('Wyślij') %>" class="btn btn-success button btn-golden">
+                    <input type="submit" value="Wyślij" class="btn btn-success button btn-golden">
                    
                 </form>
                 

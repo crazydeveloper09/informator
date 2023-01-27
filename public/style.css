@@ -1,5 +1,5 @@
 body, html {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #header {
@@ -32,17 +32,18 @@ body, html {
 
 .info__buttons {
     margin-top: 200px;
-    width: 419px;
 }
 
 .info__buttons a {
+    display: block;
     background: #474747;
     color: #EFEFEF;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 0.3em;
     padding: 10px 50px;
-    width: 100%;
+    width: 319px;
+    text-align: center;
     text-transform: uppercase;
     margin-left: 70px;
 }
@@ -93,7 +94,7 @@ body, html {
 }
 
 .date {
-    padding: 76px 0;
+    padding: 76px 10px;
     background: #313131;
     text-align: center;
     font-family: 'Della Respira', serif;
@@ -105,6 +106,7 @@ body, html {
     justify-content: center;
     align-items: center;
     gap: 87px;
+    margin: 0 auto;
 }
 
 .date .month,
@@ -118,7 +120,7 @@ body, html {
 
 .date .dayOfWeek,
 .date .hour {
-    width: 235px;
+    min-width: 235px;
     border-top: 3px solid #EFEFEF;
     border-bottom: 3px solid #EFEFEF;
 }
@@ -127,7 +129,9 @@ body, html {
     font-weight: 500;
     font-size: 128px; 
 }
-
+.important_infos {
+    padding: 0 15px;
+}
 .important_infos div {
     margin-top: 92px;
 }
@@ -243,6 +247,10 @@ body, html {
     text-transform: uppercase;
 }
 
+.other {
+    padding: 0 10px;
+}
+
 .zoom {
     margin-top: 120px;
 }
@@ -286,7 +294,34 @@ body, html {
     text-transform: uppercase;
 }
 
+.btn-grey:hover {
+    color: #EFEFEF;
+    text-decoration: none;
+    background: #626664;
+}
+
 @media (max-width: 576px) {
+    .info {
+        background: url('./przytulas.jpg');
+        background-size: 100vh;
+        background-position: center;
+    }
+
+    .info__buttons {
+        display: block;
+        padding: 0 15px;   
+    }
+    .info__buttons a {
+        display: block;
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    
     #countdown,
     #countdown span {
         display: block;
@@ -348,10 +383,5 @@ body, html {
 
     .btn-grey {
         font-size: 18px;
-    }
-
-    .info__buttons a {
-        font-size: 18px;
-        margin-left: 15px;
     }
 }
