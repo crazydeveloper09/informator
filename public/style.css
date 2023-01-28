@@ -334,17 +334,23 @@ body, html {
     
     .date div {
         gap: 17px;
+        flex-wrap: wrap;
     }
     
     .date .month,
     .date .dayOfWeek,
     .date .hour,
     .date .year {
-        font-size: 28px;
+        font-size: 38px;
+        width: 100%;
     }
     
     .date .day {
-        font-size: 58px; 
+        font-size: 78px; 
+    }
+    .date .dayOfWeek,
+    .date .hour {
+        min-width: auto;
     }
 
     .important_infos h1 {
