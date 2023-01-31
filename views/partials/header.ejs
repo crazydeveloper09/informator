@@ -28,26 +28,34 @@
         crossorigin="anonymous"></script>
        
             <script>
-                function zmianaCzasu(){
-                    const dzisiaj = new Date();
-                    const data = new Date("05/20/2023 13:30:00");
+                const _second = 1000;
+                const _minute = _second * 60;
+                const _hour = _minute * 60;
+                const _day = _hour * 24;
+                let timer;
+                function showRemaining(){
+                    const now = new Date();
+                    const end = new Date("05/20/2023 13:30:00");
+                    const distance = end - now;
                    
-                    var dzien = Math.round(Math.abs(data - dzisiaj) / 86400000) -1;
-                    var godzina = Math.round(Math.abs(data - dzisiaj) / (1000 * 60 * 60) % 24);
-                    var minuta = Math.round(Math.abs(data - dzisiaj) / (1000 * 60) % 60);
-                    var sekunda = Math.round(Math.abs(data - dzisiaj) / (1000) % 60);
+                    const days = Math.floor(distance / _day);
+                    const hours = Math.floor((distance % _day) / _hour);
+                    const minutes = Math.floor((distance % _hour) / _minute);
+                    const seconds = Math.floor((distance % _minute) / _second);
                     
         
-                    document.getElementById("days").innerHTML = dzien;
-                    document.getElementById("hours").innerHTML = godzina;
-                    document.getElementById("minutes").innerHTML = minuta;
-                    document.getElementById("seconds").innerHTML = sekunda;
+                    document.getElementById("days").innerHTML = days;
+                    document.getElementById("hours").innerHTML = hours;
+                    document.getElementById("minutes").innerHTML = minutes;
+                    document.getElementById("seconds").innerHTML = seconds;
                    
-                    setTimeout("zmianaCzasu()", 1000);
+                    
                 }
+
+                timer = setInterval(showRemaining, 1000);
             </script>
        
     
 </head>
 
-<body onload="zmianaCzasu()">
+<body onload="showRemaining()">
